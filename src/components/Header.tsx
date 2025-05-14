@@ -1,4 +1,4 @@
-import { HomeIcon, File, UserRound } from 'lucide-react';
+import { HomeIcon, File, UsersRound } from 'lucide-react';
 import Link from 'next/link';
 import { NavButton } from '@/components/NavButton';
 
@@ -23,29 +23,7 @@ export default function Header() {
         <div className='flex items-center'>
           <NavButton href='/tickets' label='Tickets' icon={File} />
 
-          <NavButtonMenu
-            icon={UsersRound}
-            label='Customers Menu'
-            choices={[
-              { title: 'Search Customers', href: '/customers' },
-              { title: 'New Customer', href: '/customers/form' },
-            ]}
-          />
-
-          <ModeToggle />
-
-          <Button
-            variant='ghost'
-            size='icon'
-            aria-label='LogOut'
-            title='LogOut'
-            className='rounded-full'
-            asChild
-          >
-            <LogoutLink>
-              <LogOut />
-            </LogoutLink>
-          </Button>
+          <NavButton href='/customers' label='Customers' icon={UsersRound} />
         </div>
       </div>
     </header>
