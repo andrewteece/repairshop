@@ -22,8 +22,7 @@ import { useAction } from 'next-safe-action/hooks';
 import { saveCustomerAction } from '@/app/actions/saveCustomerAction';
 import { useToast } from '@/hooks/use-toast';
 import { LoaderCircle } from 'lucide-react';
-import { DisplayServerActionResponse } from '@/components/DIsplayServerActionResponse';
-
+import { DisplayServerActionResponse } from '@/components/DisplayServerActionResponse';
 import { useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
