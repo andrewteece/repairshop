@@ -8,11 +8,15 @@ if (process.env.NODE_ENV === 'development') {
   config({ path: '.env.local' });
 }
 
-const sql = neon(process.env.DATABASE_URL!);
+const sql = neon(process.env.NEXT_PUBLIC_DATABASE_URL!);
 
 // logger
 // const db = drizzle(sql, { logger: true })
 
-const db = drizzle(sql);
+// const db = drizzle(sql);
+
+const db = drizzle({ client: sql });
+
+// export const db = drizzle({ client: sql });
 
 export { db };
