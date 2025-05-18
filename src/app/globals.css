@@ -124,3 +124,16 @@
 .bg-home-img {
   background-image: url('../../public/images/home-img.jpg');
 }
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.slide {
+  animation: slide 750ms ease-in-out;
+}
