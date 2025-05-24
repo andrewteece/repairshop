@@ -2,6 +2,7 @@ import { HomeIcon, File, UsersRound, LogOut } from 'lucide-react';
 import Link from 'next/link';
 import { NavButton } from '@/components/NavButton';
 import { ModeToggle } from './ModeToggle';
+import { NavButtonMenu } from './NavButtonMenu';
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components';
 import { Button } from '@/components/ui/button';
 
@@ -26,7 +27,16 @@ export default function Header() {
         <div className='flex items-center'>
           <NavButton href='/tickets' label='Tickets' icon={File} />
 
-          <NavButton href='/customers' label='Customers' icon={UsersRound} />
+          <NavButtonMenu
+            icon={UsersRound}
+            label='Customers Menu'
+            choices={[
+              { title: 'Search Customers', href: '/customers' },
+              { title: 'New Customer', href: '/customers/form' },
+            ]}
+          />
+
+          {/* <NavButton href='/customers' label='Customers' icon={UsersRound} /> */}
 
           <ModeToggle />
 
