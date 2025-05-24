@@ -1,7 +1,6 @@
 'use client';
 
 import type { TicketSearchResultsType } from '@/lib/queries/getTicketSearchResults';
-
 import {
   createColumnHelper,
   flexRender,
